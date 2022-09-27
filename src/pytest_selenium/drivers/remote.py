@@ -10,7 +10,7 @@ PORT = os.environ.get("SELENIUM_PORT", 4444)
 
 def driver_kwargs(capabilities, host, port, **kwargs):
     host = host if host.startswith("http") else f"http://{host}"
-    executor = f"{host}:{port}/"
+    executor = f"{host}:{port}"
 
     kwargs = {
         "command_executor": executor,
